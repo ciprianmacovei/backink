@@ -10,10 +10,24 @@ export default class Navbar extends React.Component<MyProps,MyState> {
         };
     }
 
+    clickOutsideTheModal(): void {
+        // @ts-ignore
+        document.addEventListener('click', function (event: React.FormEvent<HTMLSelectElement>) {
+            const navBarCollapse = document.getElementsByClassName('navbar-collapse')[0].classList;
+            if (navBarCollapse.contains('navbar-collapse') &&
+                navBarCollapse.contains('collapse') &&
+                navBarCollapse.contains('show')) {
+                // @ts-ignore
+                document.getElementsByClassName('navbar-toggler')[0].click()
+            }
+        })
+    }
+
     componentDidMount(): void {
         isMobile().then( (res:boolean) => {
             this.setState({mobile: res});
         });
+        this.clickOutsideTheModal();
     }
 
     render() {
@@ -56,24 +70,42 @@ export default class Navbar extends React.Component<MyProps,MyState> {
                         <div style={container}>
                                     <a className="navbar-brand yellow-text" href="#">BlackInk</a>
                                     <ul className="navbar-nav smooth-scroll">
-                                        <li className="nav-item" style={{marginRight:"1vw"}}>
+                                        <li className="nav-item"
+                                            data-toggle="collapse"
+                                            data-target=".navbar-collapse.show"
+                                            style={{marginRight:"1vw"}}>
                                             <a className="nav-link" href="#" >Home
                                                 <span className="sr-only">(current)</span>
                                             </a>
                                         </li>
-                                        <li className="nav-item" style={{marginRight:"1vw"}}>
+                                        <li className="nav-item"
+                                            data-toggle="collapse"
+                                            data-target=".navbar-collapse.show
+                                            " style={{marginRight:"1vw"}}>
                                             <a className="nav-link" href="#aboutPage">About</a>
                                         </li>
-                                        <li className="nav-item" style={{marginRight:"1vw"}}>
+                                        <li className="nav-item"
+                                            data-toggle="collapse"
+                                            data-target=".navbar-collapse.show"
+                                            style={{marginRight:"1vw"}}>
                                             <a className="nav-link" href="#tourPage">Tour</a>
                                         </li>
-                                        <li className="nav-item" style={{marginRight:"1vw"}}>
+                                        <li className="nav-item"
+                                            data-toggle="collapse"
+                                            data-target=".navbar-collapse.show"
+                                            style={{marginRight:"1vw"}}>
                                             <a className="nav-link" href="#">Work</a>
                                         </li>
-                                        <li className="nav-item" style={{marginRight:"1vw"}}>
+                                        <li className="nav-item"
+                                            data-toggle="collapse"
+                                            data-target=".navbar-collapse.show"
+                                            style={{marginRight:"1vw"}}>
                                             <a className="nav-link" href="#">FAQ</a>
                                         </li>
-                                        <li className="nav-item" style={{marginRight:"1vw"}}>
+                                        <li className="nav-item"
+                                            data-toggle="collapse"
+                                            data-target=".navbar-collapse.show"
+                                            style={{marginRight:"1vw"}}>
                                             <a className="nav-link" href="#">Contact</a>
                                         </li>
                                     </ul>

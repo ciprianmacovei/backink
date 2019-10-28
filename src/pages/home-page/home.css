@@ -32,3 +32,11 @@
 .faArrow {
     font-size: 50px !important;
 }
+
+.btn-group-home-page {
+    width: 200px;
+}
+
+.btn-group-home-page:hover >.fa-arrow-down {
+    color: grey !important;
+}
