@@ -63,7 +63,7 @@ export default class Navbar extends React.Component<MyProps,MyState> {
                                 data-target="#navbarTogglerDemo02"
                                 aria-controls="navbarTogglerDemo02" aria-expanded="false"
                                 aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
+                            <span className="navbar-toggler-icon"/>
                         </button>
 
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -122,7 +122,7 @@ export default class Navbar extends React.Component<MyProps,MyState> {
                                         </li>
                                         <li className="nav-item">
                                             <a className="nav-link">
-                                                <i style={faInstagram} className="fab fa-instagram light-green-text-2"></i>
+                                                <i style={faInstagram} className="fab fa-instagram light-green-text-2"/>
                                             </a>
                                         </li>
                                     </ul>
