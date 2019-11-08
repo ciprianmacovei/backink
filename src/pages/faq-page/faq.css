@@ -1,0 +1,8 @@
+li {
+    cursor: pointer;
+}
+
+.liActive {
+    border-left: 4px solid yellow;
+}
+

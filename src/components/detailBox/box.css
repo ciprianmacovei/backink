@@ -1,0 +1,22 @@
+.lineDraw {
+    height:0;
+    width:1px;
+    border-bottom:4px solid grey;
+
+    -webkit-animation: increase 1s;
+    -moz-animation:    increase 1s;
+    -o-animation:      increase 1s;
+    animation:         increase 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    100% {
+        width: 355px;
+    }
+}
+
+.beforeDrawLine {
+    height: 4px;
+    width: 355px;
+}

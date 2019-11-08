@@ -94,19 +94,19 @@ export default class Navbar extends React.Component<MyProps,MyState> {
                                             data-toggle="collapse"
                                             data-target=".navbar-collapse.show"
                                             style={{marginRight:"1vw"}}>
-                                            <a className="nav-link" href="#">Work</a>
+                                            <a className="nav-link" href="#workPage">Work</a>
                                         </li>
                                         <li className="nav-item"
                                             data-toggle="collapse"
                                             data-target=".navbar-collapse.show"
                                             style={{marginRight:"1vw"}}>
-                                            <a className="nav-link" href="#">FAQ</a>
+                                            <a className="nav-link" href="#faqPage">FAQ</a>
                                         </li>
                                         <li className="nav-item"
                                             data-toggle="collapse"
                                             data-target=".navbar-collapse.show"
                                             style={{marginRight:"1vw"}}>
-                                            <a className="nav-link" href="#">Contact</a>
+                                            <a className="nav-link" href="#contactPage">Contact</a>
                                         </li>
                                     </ul>
                                     <ul className="navbar-nav nav-flex-icons">
