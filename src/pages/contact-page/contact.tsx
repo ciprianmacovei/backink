@@ -73,14 +73,14 @@ export default class ContactPage extends React.Component<MyProps,MyState> {
                                         label="Email"
                                         className="flex-grow-1"
                                         size="sm"
-                                        style={{width: this.state.mobile ? "385px" : "100%"}}
+                                        style={{width: this.state.mobile ? "385px" : "100px"}}
                                         onChange={(e) => this.handleChange(e,'email')}
                                         value={this.state.email} />
                                     <MDBInput
                                         label="Subject"
                                         className="flex-fill"
                                         size="sm"
-                                        style={{width: this.state.mobile ? "385px" : "100%"}}
+                                        style={{width: this.state.mobile ? "385px" : "100px"}}
                                         onChange={(e) => this.handleChange(e,'subject')}
                                         value={this.state.subject}/>
                                 </div>
