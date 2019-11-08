@@ -22,6 +22,7 @@
   },
   "scripts": {
     "heroku-postbuild": "npm run build",
+    "postinstall": "npm run build",
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
