@@ -11,6 +11,7 @@
     "express": "^4.17.1",
     "mdbreact": "4.21.0",
     "npm-watch": "^0.6.0",
+    "path": "^0.12.7",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.9.0",
