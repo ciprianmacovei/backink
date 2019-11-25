@@ -1,5 +1,7 @@
 import React, { CSSProperties } from 'react';
 import { isMobile } from '../../services/mobile';
+import logo from '../../assets/logo/realLogo.png';
+
 
 export default class Navbar extends React.Component<MyProps,MyState> {
 
@@ -57,77 +59,86 @@ export default class Navbar extends React.Component<MyProps,MyState> {
 
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">
-                    <div className="container">
-                        <button className="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarTogglerDemo02"
-                                aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"/>
-                        </button>
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar fontNav">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarTogglerDemo02"
+                            aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"/>
+                    </button>
 
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <div style={container}>
-                                    <a className="navbar-brand yellow-text" href="#">BlackInk</a>
-                                    <ul className="navbar-nav smooth-scroll">
-                                        <li className="nav-item"
-                                            data-toggle="collapse"
-                                            data-target=".navbar-collapse.show"
-                                            style={{marginRight:"1vw"}}>
-                                            <a className="nav-link" href="#" >Home
-                                                <span className="sr-only">(current)</span>
-                                            </a>
-                                        </li>
-                                        <li className="nav-item"
-                                            data-toggle="collapse"
-                                            data-target=".navbar-collapse.show
+                        <div className="container">
+                            <div className="row">
+                                <div className="navbar-brand col-md-5">
+                                    <div className="d-flex justify-content-md-center align-items-center">
+                                        <img src={logo} style={{maxHeight:"35px",minHeight:"35px",height:"auto",width:"auto"}}/>
+                                        <span className="yellow-text ml-2">Alex Caligari</span>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 ">
+                                    <div className={"d-flex " + (this.state.mobile ? "flex-column" : "flex-row align-items-center")}>
+                                        <ul className="navbar-nav nav-flex-icons">
+                                            <li className="nav-item">
+                                                <a className="nav-link">
+                                                    <i style={{"color": "#8B9DC3"}} className="fab fa-facebook light-green-text-2"/>
+                                                </a>
+                                            </li>
+                                            <li className="nav-item">
+                                                <a className="nav-link">
+                                                    <i style={{color:"#1DA1F2"}} className="fab fa-twitter light-green-text-2"/>
+                                                </a>
+                                            </li>
+                                            <li className="nav-item">
+                                                <a className="nav-link">
+                                                    <i style={faInstagram} className="fab fa-instagram light-green-text-2"/>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul className="navbar-nav smooth-scroll custom-font nav-bar-font">
+                                            <li className="nav-item"
+                                                data-toggle="collapse"
+                                                data-target=".navbar-collapse.show"
+                                                style={{marginRight:"1vw"}}>
+                                                <a className="nav-link" href="#" >Home
+                                                    <span className="sr-only">(current)</span>
+                                                </a>
+                                            </li>
+                                            <li className="nav-item"
+                                                data-toggle="collapse"
+                                                data-target=".navbar-collapse.show
                                             " style={{marginRight:"1vw"}}>
-                                            <a className="nav-link" href="#aboutPage">About</a>
-                                        </li>
-                                        <li className="nav-item"
-                                            data-toggle="collapse"
-                                            data-target=".navbar-collapse.show"
-                                            style={{marginRight:"1vw"}}>
-                                            <a className="nav-link" href="#tourPage">Tour</a>
-                                        </li>
-                                        <li className="nav-item"
-                                            data-toggle="collapse"
-                                            data-target=".navbar-collapse.show"
-                                            style={{marginRight:"1vw"}}>
-                                            <a className="nav-link" href="#workPage">Work</a>
-                                        </li>
-                                        <li className="nav-item"
-                                            data-toggle="collapse"
-                                            data-target=".navbar-collapse.show"
-                                            style={{marginRight:"1vw"}}>
-                                            <a className="nav-link" href="#faqPage">FAQ</a>
-                                        </li>
-                                        <li className="nav-item"
-                                            data-toggle="collapse"
-                                            data-target=".navbar-collapse.show"
-                                            style={{marginRight:"1vw"}}>
-                                            <a className="nav-link" href="#contactPage">Contact</a>
-                                        </li>
-                                    </ul>
-                                    <ul className="navbar-nav nav-flex-icons">
-                                        <li className="nav-item">
-                                            <a className="nav-link">
-                                                <i style={{"color": "#8B9DC3"}} className="fab fa-facebook light-green-text-2"/>
-                                            </a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link">
-                                                <i style={{color:"#1DA1F2"}} className="fab fa-twitter light-green-text-2"/>
-                                            </a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link">
-                                                <i style={faInstagram} className="fab fa-instagram light-green-text-2"/>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                                <a className="nav-link" href="#aboutPage">About</a>
+                                            </li>
+                                            <li className="nav-item"
+                                                data-toggle="collapse"
+                                                data-target=".navbar-collapse.show"
+                                                style={{marginRight:"1vw"}}>
+                                                <a className="nav-link" href="#tourPage">Tour</a>
+                                            </li>
+                                            <li className="nav-item"
+                                                data-toggle="collapse"
+                                                data-target=".navbar-collapse.show"
+                                                style={{marginRight:"1vw"}}>
+                                                <a className="nav-link" href="#workPage">Work</a>
+                                            </li>
+                                            <li className="nav-item"
+                                                data-toggle="collapse"
+                                                data-target=".navbar-collapse.show"
+                                                style={{marginRight:"1vw"}}>
+                                                <a className="nav-link" href="#faqPage">FAQ</a>
+                                            </li>
+                                            <li className="nav-item"
+                                                data-toggle="collapse"
+                                                data-target=".navbar-collapse.show"
+                                                style={{marginRight:"1vw"}}>
+                                                <a className="nav-link" href="#contactPage">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </nav>
             </div>

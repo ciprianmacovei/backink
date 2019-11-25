@@ -85,21 +85,23 @@ export default class FaqPage extends React.Component<MyProps,MyState> {
     }
 
 
+
+
     render() {
         return (
             <div id="faqPage"
-                 className="d-flex flex-column justify-content-center"
-                 style={pageSpacingsAndBackground('none','black', this.state.mobile)}
+                 className="d-flex flex-column justify-content-center row"
+                 style={{backgroundColor:"black", height: this.state.mobile ? "auto" : "100vh"}}
             >
                 <div className="mt-100">
-                    <div className="row">
+                    <div className="row" style={{marginRight:"0"}}>
                         <div className="col-md-5 offset-md-2 col-sm-12">
                             <h3 className="yellow-text">FAQ & INFO</h3>
-                            <ul className="mt-5">
+                            <ul className="mt-5 custom-font">
                                 {
                                     this.state.faqArray.map( (el: faqItems, index) =>
                                             el.show ?
-                                                <li className="d-flex flex-column liActive pl-5 animated fadeIn" onClick={() => this.showItem(index)}
+                                                <li className={"d-flex flex-column liActive animated fadeIn " + (this.state.mobile? '':'pl-5')} onClick={() => this.showItem(index)}
                                                     key={index}>
                                                     <div className="d-flex flex-row">
                                                         <span className="yellow-text mr-4">{index + 1}</span>
@@ -118,16 +120,16 @@ export default class FaqPage extends React.Component<MyProps,MyState> {
                             </ul>
                         </div>
 
-                        <div className="col-md-3 col-sm-12">
+                        <div className="col-md-3 col-sm-12 custom-font">
                             <div className="d-flex flex-column mt-50">
-                                <h5 className="yellow-text">Info</h5>
+                                <h5 className="yellow-text font-weight-bold">Info</h5>
                                 <p className="white-text">If you have any other question that isn't covered in the FAQ, feel free to send us a
                                     message using the form or the information provided below.</p>
-                                <a href="#" className="yellow-text">Contact me</a>
+                                <a href="#" className="yellow-text under-line">Contact me</a>
                             </div>
 
                             <div className="d-flex flex-column mt-5">
-                                <h5 className="yellow-text">Black Ink Studio</h5>
+                                <h5 className="yellow-text font-weight-bold">Black Ink Studio</h5>
                                 <p className="white-text">Alex Caligari is the owner of Black Ink Studio, a tattoo studio located in central Bucharest,
                                     Romania. Opened in 2008, with over 10 years of experience, Black Ink Studio is one of the
                                     best tattoo studios in Bucharest. For scheduling and appointments, please use the forms

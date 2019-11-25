@@ -1,5 +1,6 @@
 import * as React from "react";
 import Navbar from '../../components/navbar/navbar';
+import { pageSpacingsAndBackground } from "../../services/background";
 import AboutPage from "../about-page/about";
 import ContactPage from "../contact-page/contact";
 import FaqPage from "../faq-page/faq";
@@ -9,36 +10,41 @@ import WorkPage from "../work-page/work";
 
 export default class Master extends React.Component {
 
-    scrollingNavBar(): void {
-        const nav = document.getElementsByTagName('nav');
-        const doc = document.documentElement;
-        window.addEventListener('scroll', function () {
-            if ((window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0) === 0)
-                {
-                nav[0].classList.remove('animated');
-                nav[0].classList.remove('pulse');
-                } else {
-                nav[0].classList.add('animated');
-                nav[0].classList.add("pulse");
-            }
-        })
-    }
+  scrollingNavBar(): void {
+    const nav = document.getElementsByTagName('nav');
+    const doc = document.documentElement;
+    window.addEventListener('scroll', function () {
+      if ((window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0) === 0)
+      {
+        nav[0].classList.remove('animated');
+        nav[0].classList.remove('pulse');
+      } else {
+        nav[0].classList.add('animated');
+        nav[0].classList.add("pulse");
+      }
+    })
+  }
 
-    componentDidMount(): void {
-        this.scrollingNavBar();
-    }
+  componentDidMount(): void {
+    this.scrollingNavBar();
+  }
 
-    render() {
-        return (
-            <div>
-                <Navbar/>
-                <HomePage/>
-                <AboutPage/>
-                <TourPage/>
-                <WorkPage/>
-                <FaqPage/>
-                <ContactPage/>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div >
+        <Navbar/>
+        <div
+          className={"container-fluid"}
+          style={{backgroundColor:"black"}}
+        >
+          <HomePage/>
+          <AboutPage/>
+          <TourPage/>
+          <WorkPage/>
+          <FaqPage/>
+          <ContactPage/>
+        </div>
+      </div>
+    )
+  }
 }

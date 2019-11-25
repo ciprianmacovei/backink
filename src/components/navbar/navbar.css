@@ -1,6 +1,18 @@
+@font-face {font-family: "Nova Square"; src: url("//db.onlinewebfonts.com/t/8208745322f59eb360faf56981ba8332.eot"); src: url("//db.onlinewebfonts.com/t/8208745322f59eb360faf56981ba8332.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8208745322f59eb360faf56981ba8332.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8208745322f59eb360faf56981ba8332.woff") format("woff"), url("//db.onlinewebfonts.com/t/8208745322f59eb360faf56981ba8332.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8208745322f59eb360faf56981ba8332.svg#Nova Square") format("svg"); }
+
 .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
+.logoBrand {
+    max-height: 40px;
+    max-width:  40px;
+    height: auto;
+    width: auto;
+}
+
+.fontNav {
+    font-family: "Nova Square" !important;
+}

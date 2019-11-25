@@ -1,5 +1,10 @@
 @font-face {font-family: "LTCRecordTitleW00-Regular"; src: url("//db.onlinewebfonts.com/t/ad230925aac0325de699bf05b6bdfa0c.eot"); src: url("//db.onlinewebfonts.com/t/ad230925aac0325de699bf05b6bdfa0c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ad230925aac0325de699bf05b6bdfa0c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ad230925aac0325de699bf05b6bdfa0c.woff") format("woff"), url("//db.onlinewebfonts.com/t/ad230925aac0325de699bf05b6bdfa0c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ad230925aac0325de699bf05b6bdfa0c.svg#LTCRecordTitleW00-Regular") format("svg"); }
 
+
+.yellow-text {
+    color: #d9c07e !important;
+}
+
 .fontMediul {
     font-size: 22.5px;
 }
@@ -10,7 +15,6 @@ html {
 }
 
 body {
-    overflow-x: hidden;
     font-family: 'LTCRecordTitleW00-Regular';
 }
 
@@ -34,21 +38,8 @@ body {
     min-height: 400px;
 }
 
-.row {
-    margin: 0 !important;
-}
-
-.container-fluid {
-    padding: 0 !important;
-}
-
 .colPadding {
     padding-left: 0 !important;
-}
-
-.specialRow {
-    padding-right: 15px !important;
-    padding-left: 15px !important;
 }
 
 .fontFamily {
@@ -140,4 +131,12 @@ body {
     -moz-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
+}
+
+.custom-font {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.nav-bar-font {
+    font-size: 20px;
 }

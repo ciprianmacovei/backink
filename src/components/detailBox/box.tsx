@@ -21,8 +21,9 @@ export default class DetailBox extends React.Component<MyProps,MyState> {
     render() {
         return (
 
-            <div className="d-flex flex-column ">
-                <div className="d-flex flex-column"
+            <div className={"d-flex flex-column"}>
+
+                <div className="d-flex flex-column "
                      style={{fontSize: this.state.mobile ? "x-small": "large"}}
                 >
                     <div className="d-flex flex-row">

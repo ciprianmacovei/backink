@@ -5,3 +5,8 @@
 #textLabel {
     color: grey;
 }
+
+.dark-toaster {
+  background-color:  #d9c07e !important;
+  color: black;
+}
